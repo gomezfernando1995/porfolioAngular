@@ -1,19 +1,27 @@
-<mat-toolbar class="cont-navbar" >
-    <div class="cont-left">
-        <span class="titulo"> Fernando Gomez </span>
-    </div>
-    <div class="cont-center">
-        <p>sd</p>
-    </div>
-    <span class="example-spacer"></span>
-    <div class="cont-right">
+<mat-toolbar class="cont-navbar">
 
-    </div>  
+
+  <div class="cont-left">
+    <span class="titulo"> Gomez. </span>
+  </div>
+  
+  <div class="cont-center">
+    <button mat-button>Sobre mi </button>
+    <button mat-button>Portfolio</button>
+    <button mat-button>Contactame</button>
+  </div>
+
+ 
+  <div class="cont-right">
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>favorite</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <button mat-icon-button 
+    matTooltip="Compartir mi portfolio"
+    class="example-icon"aria-label="Button that displays a tooltip when focused or hovered over">
       <mat-icon>share</mat-icon>
     </button>
+  </div>
+
 
 </mat-toolbar>

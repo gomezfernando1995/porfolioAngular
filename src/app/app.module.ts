@@ -10,11 +10,12 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PresentationComponent } from './components/presentation/presentation.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,NavbarComponent
+    AppComponent,NavbarComponent,PresentationComponent
   ],
   imports: [
     BrowserModule,
@@ -23,11 +24,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    
-    
 
   ],
-  providers: [NavbarComponent],
+  providers: [NavbarComponent,PresentationComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
