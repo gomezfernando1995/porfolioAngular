@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap');
 
-$backgroud:#171123;
+$backgroud:#171123b0;
 $red:rgb(235, 4, 62);
 
 .cont-navbar {
@@ -10,9 +10,9 @@ $red:rgb(235, 4, 62);
   justify-content: space-evenly;
   height: 5rem;
   background-color:$backgroud;
-  width: 90%;
+  width: 60%;
   margin: 0 auto;
-}
+}w
 
 .cont-left {
   display: flex;
@@ -41,12 +41,12 @@ $red:rgb(235, 4, 62);
 
   button {
     color: white;
-   font-family: 'Poppins', sans-serif;
+   font-family: 'Segoe UI', sans-serif;
 
     // background-color: red;
     margin-left: 15px;
     font-size: 15px;
-    font-weight: 500;
+    // font-weight: 500;
   }
 }
 
