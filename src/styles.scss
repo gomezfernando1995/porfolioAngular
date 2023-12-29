@@ -1,4 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
-$backgroud:#171123;
-html, body { height: 100%; background-color:$backgroud; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+$backgroud: #171123;
+html,
+body {
+  height: 100%;
+  background-color: $backgroud;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+//FONT LINKEDIN
+
+@font-face {
+  font-family: "linkedin";
+  src: url("assets/font/linkedlin/MYRIADPRO-BOLD.OTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+//FONT MONSERRAT
+@font-face {
+  font-family: "monserrat-black";
+  src: url("assets/font/monserrat/Montserrat-Black.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monserrat-bold";
+  src: url("assets/font/monserrat/Montserrat-Bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monserrat-extrabold";
+  src: url("assets/font/monserrat/Montserrat-ExtraBold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monserrat-extralight";
+  src: url("assets/font/monserrat/Montserrat-ExtraLight.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monserrat-light";
+  src: url("assets/font/monserrat/Montserrat-Light.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monserrat-regular";
+  src: url("assets/font/monserrat/Montserrat-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monserrat-semibold";
+  src: url("assets/font/monserrat/Montserrat-SemiBold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monserrat-thin";
+  src: url("assets/font/monserrat/Montserrat-Thin.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

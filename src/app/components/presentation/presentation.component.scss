@@ -1,13 +1,194 @@
-.cont-body{
-    width: 60%;
-    height: 90vh;
-    margin: 0 auto;
+$red: rgb(235, 4, 62);
+$red-target: #be4b47;
+$red-target-hover: #e65e59;
 
+section {
+  margin-top: 85px;
+}
+.container-grid {
+  height: 90vh;
+  width: 75%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "perfil perfil perfil cv"
+    "perfil perfil perfil cv"
+    "perfil perfil perfil contact"
+    "perfil perfil perfil contact"
+    "linkedin edad proyect proyect"
+    "linkedin edad  proyect proyect ";
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.box {
+  border-radius: 20px;
+  margin: 10px;
+  background-color: rgb(92, 99, 92);
+}
+
+.perfil {
+  grid-area: perfil;
+  background-color: $red-target;
+  color: white;
+
+  .container-info {
+    margin-left: 4rem;
+    margin-top: 6rem;
+    // background-color: blue;
     display: flex;
-    // align-items: center;
-    justify-content: center;
+    width: 60%;
+    flex-direction: column;
+  }
 
-    background-color: blue;
+  h2 {
+    font-family: "monserrat-bold", sans-serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    width: 70%;
+    margin-bottom: 2.5rem;
+  }
+  p {
+    width: 70%;
+    font-family: "monserrat-thin", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.1;
+    // letter-spacing: 0.1em;
+  }
+
+  button{
+    margin-top: 1rem;
+    border-radius:  15px;
+    font-family: "monserrat-bold", sans-serif;
+    font-size: 1rem;
+    color: white;
+    // background-color:#e65e59;
+    width: 35%;
+
+  }
+
+}
+
+.cv {
+  grid-area: cv;
+  background-color: $red-target;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+
+  h2 {
+    font-family: "monserrat", sans-serif;
+    font-size: 1.5rem;
+  }
+  mat-icon {
+    font-size: 2.6rem;
+    width: auto;
+    height: auto;
+  }
+}
+
+.contact {
+  grid-area: contact;
+  background-color: $red-target;
+  display: flex;
+  align-items: center;
+  flex-direction: center;
+  justify-content: center;
+  color: white;
+ 
+  mat-icon{
+    width: auto;
+    height: auto;
+    font-size: 6rem;
+  }
+}
 
 
+.proyect {
+  grid-area: proyect;
+
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+  h2 {
+    font-family: "monserrat-bold", sans-serif;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 5;
+    color: white;
+  }
+
+  h3 {
+    font-family: "monserrat-light", sans-serif;
+
+    position: relative;
+    z-index: 5;
+    width: 70%;
+    color: white;
+  }
+}
+
+.linkedin {
+  grid-area: linkedin;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e76a8;
+  h2 {
+    font-family: "linkedin", sans-serif;
+    font-size: 10rem;
+    color: white;
+  }
+}
+
+.age {
+  grid-area: edad;
+
+  font-family: open;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 175, 106);
+
+  h2 {
+    font-family: "monserrat-bold", sans-serif;
+    font-size: 5rem;
+    padding: 1rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    font-family: "monserrat-semibold", sans-serif;
+  }
+  h4 {
+    font-size: 1.2rem;
+    font-family: "monserrat-thin", sans-serif;
+  }
+}
+
+.contact, .cv, .perfil {
+    transition: background-color 0.2s ease;
+  }
+
+.contact:hover, .cv:hover, .perfil:hover {
+    background-color: $red-target-hover;
 }
