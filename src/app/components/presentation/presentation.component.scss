@@ -4,7 +4,8 @@ $red-target-hover: #e65e59;
 
 section {
   margin-top: 85px;
-}
+}      
+
 .container-grid {
   height: 90vh;
   width: 75%;
@@ -191,4 +192,64 @@ section {
 
 .contact:hover, .cv:hover, .perfil:hover {
     background-color: $red-target-hover;
+}
+
+@media (max-width: 600px) {
+
+
+  .container-grid {
+    width: 100%;
+    grid-template-areas: 
+      'perfil'
+      'cv'
+      'contact'
+      'linkedin'
+      'edad'
+      'proyect';
+    grid-template-columns: 1fr; /* Crea una única columna */
+  }
+
+  .perfil {
+    grid-area: perfil;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  
+    .container-info {
+      padding: 20px;
+      margin:0;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    p {
+      width: 80%;
+      font-size: 1rem;
+      line-height: 1.1;
+    }
+  
+    button{
+      margin-top: 1rem;
+      border-radius:  15px;
+      font-size: 1rem;
+      color: white;
+      background-color:#e65e59;
+      width: 60%;
+    }
+  
+  }
+
+
+
 }
