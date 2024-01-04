@@ -7,7 +7,6 @@ section {
 }      
 
 .container-grid {
-  height: 90vh;
   width: 75%;
   margin: 0 auto;
   display: grid;
@@ -38,7 +37,7 @@ section {
     margin-top: 6rem;
     // background-color: blue;
     display: flex;
-    width: 60%;
+    width: 70%;
     flex-direction: column;
   }
 
@@ -47,18 +46,25 @@ section {
     font-size: 2.5rem;
     line-height: 1;
     width: 70%;
+    height: 70%;
     margin-bottom: 2.5rem;
+    // background-color: blue;
   }
   p {
-    width: 70%;
+    width: 28rem;
+    // background-color: red;
     font-family: "monserrat-thin", sans-serif;
     font-size: 1.3rem;
     line-height: 1.1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
     // letter-spacing: 0.1em;
   }
 
   button{
     margin-top: 1rem;
+    margin-bottom: 2rem;
     border-radius:  15px;
     font-family: "monserrat-bold", sans-serif;
     font-size: 1rem;
@@ -90,6 +96,11 @@ section {
   }
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
 .contact {
   grid-area: contact;
   background-color: $red-target;
@@ -105,7 +116,6 @@ section {
     font-size: 6rem;
   }
 }
-
 
 .proyect {
   grid-area: proyect;
@@ -157,6 +167,7 @@ section {
     font-size: 10rem;
     color: white;
   }
+
 }
 
 .age {
@@ -186,16 +197,19 @@ section {
   }
 }
 
-.contact, .cv, .perfil {
+.contact, .cv, .perfil ,.linkedin{
     transition: background-color 0.2s ease;
   }
+
+.linkedin:hover{
+  background-color: #1087be;
+} 
 
 .contact:hover, .cv:hover, .perfil:hover {
     background-color: $red-target-hover;
 }
 
 @media (max-width: 600px) {
-
 
   .container-grid {
     width: 100%;
@@ -247,9 +261,51 @@ section {
       background-color:#e65e59;
       width: 60%;
     }
+  }
+}
+
+
+@media (max-width: 1050px) {
+
+
+  .perfil {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  
+    .container-info {
+      padding: 20px;
+      margin:0;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    p {
+      width: 80%;
+      font-size: 1.1rem;
+      line-height: 1.1;
+    }
+  
+    button{
+      margin-top: 1rem;
+      border-radius:  15px;
+      font-size: 1rem;
+      color: white;
+      background-color:#e65e59;
+      width: 60%;
+    }
   
   }
-
-
 
 }
