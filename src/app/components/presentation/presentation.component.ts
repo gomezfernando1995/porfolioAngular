@@ -24,4 +24,6 @@ export class PresentationComponent  {
      
     this.age=  (Math.round( diferenciaEnAños)).toString();
   }
+
+
 }

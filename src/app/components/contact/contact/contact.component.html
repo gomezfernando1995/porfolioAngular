@@ -1,0 +1,79 @@
+<section>
+
+    <div class="arrowback">
+        <button routerLink="/presentation" mat-fab color="primary"
+            aria-label="Example icon button with a delete icon">
+            <mat-icon>arrow_back_ios</mat-icon>
+        </button>
+    </div>
+
+    <div class="box info"></div>
+    <div class="box form">
+
+        <form action="https://formspree.io/f/moqgqzlp"   method="POST" [formGroup]="this.formEmail">
+            <h2 class="title">Contactame! </h2>
+
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input  type="name" name="name" matInput formControlName="name"
+                    required>
+                @if (nombre.invalid) {
+                <mat-error>{{getErrorMessage(1,'Debe ingresar un nombre ')}}</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Ingrese su email</mat-label>
+                <input  type="email" name="email" matInput placeholder="pat@ejemplo.com"
+                    formControlName="email"
+                    required>
+                @if (correo.invalid) {
+                <mat-error>{{getErrorMessage(2,'Debes ingresar un email')}}</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field class="text">
+                <mat-label>Escriba su Mensaje</mat-label>
+                <textarea name="message" maxlength="256" formControlName="message" matInput></textarea>
+                <!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+
+            </mat-form-field>
+
+            <button   type="submit" mat-button>Enviar Mensaje</button>
+
+        </form>
+
+        <!-- <form class="row" [formGroup]="this.formEmail">
+            <ion-card-content class="centrar">
+    
+              <ion-input class="input color-label" label="Correo"
+                formControlName="email"
+                label-placement="floating" type="email" fill="solid"
+                placeholder="Ingrese un correo..."></ion-input>
+    
+              <ion-item class="input" fill="solid">
+                <ion-input class="color-label" label="Contraseña"
+                  label-placement="floating" formControlName="password"
+                  [type]="inputType"
+                  [(ngModel)]="inputValue"></ion-input>
+                <ion-icon [name]="(inputType == 'password') ? 'eye' : 'eye-off'"
+                  slot="end"
+                  (click)="inputType = (inputType == 'password') ? 'text' : 'password';"></ion-icon>
+              </ion-item>
+    
+            </ion-card-content>
+            <div class="cont-iniciarSesion centrar">
+              <ion-button (click)="login()" value="Login" class="btn-ingresar"
+                [disabled]="!this.formUsuario.valid">Iniciar Sesion</ion-button>
+            </div>
+    
+          </form> -->
+
+    </div>
+
+    <!-- <div class="container-flex">
+            
+           
+
+    </div>     -->
+</section>

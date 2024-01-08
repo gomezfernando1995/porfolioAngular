@@ -4,7 +4,12 @@ $red-target-hover: #e65e59;
 
 section {
   margin-top: 85px;
-}      
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
 
 .container-grid {
   width: 75%;
@@ -15,7 +20,7 @@ section {
     "perfil perfil perfil cv"
     "perfil perfil perfil contact"
     "perfil perfil perfil contact"
-    "linkedin edad proyect proyect"
+    "linkedin edad proyect proyect "
     "linkedin edad  proyect proyect ";
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(4, 1fr);
@@ -27,17 +32,34 @@ section {
   background-color: rgb(92, 99, 92);
 }
 
+// --------------------------------------  BOTONES  --------------------------------------
+
+
 .perfil {
   grid-area: perfil;
   background-color: $red-target;
   color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+
+
+  .photo{
+    width: 350px;
+    filter: grayscale(0%) drop-shadow(2px 4px 7px #000000);
+    margin-left: 1rem;
+  }
+
+
 
   .container-info {
-    margin-left: 4rem;
+    // background-color: red;
+    margin-left: 3rem;
     margin-top: 6rem;
-    // background-color: blue;
     display: flex;
-    width: 70%;
+    width: 50%;
     flex-direction: column;
   }
 
@@ -58,22 +80,19 @@ section {
     line-height: 1.1;
     overflow: hidden;
     text-overflow: ellipsis;
-    
     // letter-spacing: 0.1em;
   }
 
-  button{
+  button {
     margin-top: 1rem;
     margin-bottom: 2rem;
-    border-radius:  15px;
+    border-radius: 15px;
     font-family: "monserrat-bold", sans-serif;
     font-size: 1rem;
     color: white;
     // background-color:#e65e59;
     width: 35%;
-
   }
-
 }
 
 .cv {
@@ -96,11 +115,6 @@ section {
   }
 }
 
-a{
-  text-decoration: none;
-  color: white;
-}
-
 .contact {
   grid-area: contact;
   background-color: $red-target;
@@ -109,8 +123,8 @@ a{
   flex-direction: center;
   justify-content: center;
   color: white;
- 
-  mat-icon{
+
+  mat-icon {
     width: auto;
     height: auto;
     font-size: 6rem;
@@ -164,10 +178,9 @@ a{
   background-color: #0e76a8;
   h2 {
     font-family: "linkedin", sans-serif;
-    font-size: 10rem;
+    font-size: 9rem;
     color: white;
   }
-
 }
 
 .age {
@@ -196,95 +209,50 @@ a{
     font-family: "monserrat-thin", sans-serif;
   }
 }
+// --------------------------------------  HOVER       --------------------------------------
 
-.contact, .cv, .perfil ,.linkedin{
-    transition: background-color 0.2s ease;
-  }
+.contact,
+.cv,
+.perfil,
+.linkedin {
+  transition: background-color 0.2s ease;
+}
 
-.linkedin:hover{
+.linkedin:hover {
   background-color: #1087be;
-} 
-
-.contact:hover, .cv:hover, .perfil:hover {
-    background-color: $red-target-hover;
 }
 
-@media (max-width: 600px) {
+.contact:hover,
+.cv:hover,
+.perfil:hover {
+  background-color: $red-target-hover;
 
-  .container-grid {
-    width: 100%;
-    grid-template-areas: 
-      'perfil'
-      'cv'
-      'contact'
-      'linkedin'
-      'edad'
-      'proyect';
-    grid-template-columns: 1fr; /* Crea una única columna */
-  }
-
-  .perfil {
-    grid-area: perfil;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-  
-    .container-info {
-      padding: 20px;
-      margin:0;
-      width: 90%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-      width: 100%;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    p {
-      width: 80%;
-      font-size: 1rem;
-      line-height: 1.1;
-    }
-  
-    button{
-      margin-top: 1rem;
-      border-radius:  15px;
-      font-size: 1rem;
-      color: white;
-      background-color:#e65e59;
-      width: 60%;
-    }
-  }
 }
 
+// --------------------------------------  MEDIA QUERIES  --------------------------------------
 
 @media (max-width: 1050px) {
-
+  .container-grid {
+    width: 100%;
+  }
 
   .perfil {
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-  
-  
+
     .container-info {
       padding: 20px;
-      margin:0;
+      margin: 0;
       width: 90%;
+      // background-color: blue    ;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
     }
-  
+
     h2 {
       font-size: 1.8rem;
       width: 100%;
@@ -296,16 +264,129 @@ a{
       font-size: 1.1rem;
       line-height: 1.1;
     }
-  
-    button{
+
+    button {
       margin-top: 1rem;
-      border-radius:  15px;
+      border-radius: 15px;
       font-size: 1rem;
       color: white;
-      background-color:#e65e59;
-      width: 60%;
+      background-color: #e65e59;
+      width: 15rem;
     }
-  
   }
 
+  .cv {
+    h2 {
+      font-family: "monserrat", sans-serif;
+      font-size: 0.9rem;
+    }
+    mat-icon {
+      font-size: 1.9rem;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .contact {
+    mat-icon {
+      font-size: 4rem;
+    }
+  }
+
+  .linkedin {
+    h2 {
+      font-size: 5rem;
+    }
+  }
+
+  .age {
+    h2 {
+      font-size: 3.5rem;
+      padding: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+
+  .proyect {
+
+    .text {
+      margin-top: 2rem;
+      margin-left: 2rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      position: relative;
+      z-index: 5;
+      color: white;
+    }
+  
+    h3 {
+      font-size: .9rem;
+      z-index: 5;
+      width: 90%;
+      height: 7rem;
+      color: white;
+    }
+  }
+
+}
+
+@media (max-width: 650px) {
+  .container-grid {
+    width: 90%;
+    height: auto;
+    grid-template-areas:
+      "perfil"
+      "cv"
+      "contact"
+      "linkedin"
+      "edad"
+      "proyect";
+    grid-template-columns: 1fr; /* Crea una única columna */
+  }
+
+  .perfil {
+    grid-area: perfil;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container-info {
+      padding: 20px;
+      margin: 0;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    p {
+      width: 80%;
+      font-size: 1rem;
+      line-height: 1.1;
+    }
+
+    button {
+      margin-top: 1rem;
+      border-radius: 15px;
+      font-size: 1rem;
+      color: white;
+      background-color: #e65e59;
+      width: 60%;
+    }
+  }
 }
