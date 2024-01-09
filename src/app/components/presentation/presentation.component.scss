@@ -34,7 +34,6 @@ a {
 
 // --------------------------------------  BOTONES  --------------------------------------
 
-
 .perfil {
   grid-area: perfil;
   background-color: $red-target;
@@ -44,15 +43,11 @@ a {
   align-items: center;
   justify-content: center;
 
-
-
-  .photo{
-    width: 350px;
+  .photo {
+    width: 310px;
     filter: grayscale(0%) drop-shadow(2px 4px 7px #000000);
-    margin-left: 1rem;
+    margin-left: 5rem;
   }
-
-
 
   .container-info {
     // background-color: red;
@@ -67,16 +62,16 @@ a {
     font-family: "monserrat-bold", sans-serif;
     font-size: 2.5rem;
     line-height: 1;
-    width: 70%;
+    width: 80%;
     height: 70%;
     margin-bottom: 2.5rem;
     // background-color: blue;
   }
   p {
-    width: 28rem;
+    width: 26rem;
     // background-color: red;
     font-family: "monserrat-thin", sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.1;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -226,12 +221,11 @@ a {
 .cv:hover,
 .perfil:hover {
   background-color: $red-target-hover;
-
 }
 
 // --------------------------------------  MEDIA QUERIES  --------------------------------------
 
-@media (max-width: 1050px) {
+@media (max-width: 1330px) {
   .container-grid {
     width: 100%;
   }
@@ -241,6 +235,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .photo {
+      width: 250px;
+      filter: grayscale(0%) drop-shadow(2px 4px 7px #000000);
+      margin-left: 1rem;
+    }
 
     .container-info {
       padding: 20px;
@@ -314,7 +314,6 @@ a {
   }
 
   .proyect {
-
     .text {
       margin-top: 2rem;
       margin-left: 2rem;
@@ -325,16 +324,15 @@ a {
       z-index: 5;
       color: white;
     }
-  
+
     h3 {
-      font-size: .9rem;
+      font-size: 0.9rem;
       z-index: 5;
       width: 90%;
       height: 7rem;
       color: white;
     }
   }
-
 }
 
 @media (max-width: 650px) {

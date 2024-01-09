@@ -3,7 +3,7 @@
         <div class="box perfil">
             <div class="container-info">
                 <h2>
-                    Hola! Soy Fernando Gomez
+                    Hola! Soy Fernando
                 </h2>
                 <p>Soy <strong>Analista de Sistemas</strong> recién graduado y
                     empleado en el
@@ -14,31 +14,36 @@
                     <strong> Node.js </strong>.
                     Siempre estoy buscando nuevas oportunidades para aplicar y
                     expandir mis habilidades en el campo de la tecnología.</p>
-                    <button mat-button>Conocer Mas</button>
+                <button mat-button>Conocer Mas</button>
 
             </div>
-            <div class="cont-photo">
-
-                <img class="photo"src="../../../assets/logo/photo.png" alt="photo">
+            @if (isDesktop) {
+            <div  class="cont-photo">
+                <img class="photo" src="../../../assets/logo/photo1.png"
+                    alt="photo">
             </div>
+
+            }
         </div>
-
 
         <div class="box cv">
             <h2>OBTENER CV</h2>
-            
-            <a href="https://dl.dropbox.com/scl/fi/smiptdb0yv6a4juszwa1q/cv-gomez-fernando.pdf?rlkey=skws6ss7hj28ux7ptf90qhojc&dl=0" download="" ><mat-icon aria-hidden="false" aria-label="Example home icon"
-                fontIcon="download">
-            </mat-icon></a>
+
+            <a
+                href="https://dl.dropbox.com/scl/fi/smiptdb0yv6a4juszwa1q/cv-gomez-fernando.pdf?rlkey=skws6ss7hj28ux7ptf90qhojc&dl=0"
+                download><mat-icon aria-hidden="false"
+                    aria-label="Example home icon"
+                    fontIcon="download">
+                </mat-icon></a>
 
         </div>
         <div class="box contact">
 
-            <mat-icon  routerLink="/contact" aria-hidden="false" aria-label="Example home icon"
+            <mat-icon routerLink="/contact" aria-hidden="false"
+                aria-label="Example home icon"
                 fontIcon="mail">
 
             </mat-icon>
-
 
         </div>
 
@@ -53,8 +58,9 @@
         </div>
 
         <div class="box linkedin">
-            <a href="https://www.linkedin.com/in/fernando-gomez-b8507a165/" target="_blank" > <h2>in</h2></a>
-           
+            <a href="https://www.linkedin.com/in/fernando-gomez-b8507a165/"
+                target="_blank"> <h2>in</h2></a>
+
         </div>
 
         <div class="box age">

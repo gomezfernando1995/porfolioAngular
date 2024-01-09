@@ -7,12 +7,18 @@ import { Component } from '@angular/core';
   templateUrl: './presentation.component.html',
   styleUrl: './presentation.component.scss',
 })
-export class PresentationComponent  {
+export class PresentationComponent {
+  age!: string;
+  isDesktop: boolean = window.innerWidth > 768;
 
-  age! : string;
-
-  constructor(){
+  constructor() {
     this.myAge();
+  }
+
+  ngOnInit() {
+    window.addEventListener('resize', () => {
+      this.isDesktop = window.innerWidth > 768; // Actualiza el valor al cambiar el tamaño de la ventana
+    });
   }
 
   myAge() {
@@ -20,10 +26,9 @@ export class PresentationComponent  {
     let fecha2: Date = new Date(); // Fecha actual
 
     let diferenciaEnMilisegundos: number = fecha2.getTime() - fecha1.getTime();
-    let diferenciaEnAños: number =  diferenciaEnMilisegundos / (1000 * 60 * 60 * 24 * 365.25);
-     
-    this.age=  (Math.round( diferenciaEnAños)).toString();
+    let diferenciaEnAños: number =
+      diferenciaEnMilisegundos / (1000 * 60 * 60 * 24 * 365.25);
+
+    this.age = Math.round(diferenciaEnAños).toString();
   }
-
-
 }
