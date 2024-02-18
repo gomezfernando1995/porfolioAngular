@@ -5,12 +5,10 @@ $red-target-hover: #e65e59;
 section {
   margin-top: 85px;
 }
-
 a {
   text-decoration: none;
   color: white;
 }
-
 .container-grid {
   width: 75%;
   margin: 0 auto;
@@ -31,8 +29,6 @@ a {
   align-items: center;
   justify-content: center;
 }
-
-// --------------------------------------  BOTONES  --------------------------------------
 
 .perfil {
   grid-area: perfil;
@@ -201,7 +197,7 @@ a {
 
 @media (max-width: 1330px) {
   .container-grid {
-    width: 95%;
+    width: 96%;
   }
 
   .perfil {
@@ -238,10 +234,6 @@ a {
     }
 
     button {
-      margin-top: 1rem;
-      border-radius: 15px;
-      font-size: 1rem;
-      color: white;
       background-color: #e65e59;
       width: 15rem;
     }
@@ -249,13 +241,10 @@ a {
 
   .cv {
     h2 {
-      font-family: "monserrat", sans-serif;
       font-size: 0.9rem;
     }
     mat-icon {
       font-size: 1.9rem;
-      width: auto;
-      height: auto;
     }
   }
 
@@ -286,42 +275,25 @@ a {
   }
 
   .proyect {
-    .text {
-      margin-top: 2rem;
-      margin-left: 2rem;
-    }
     h2 {
       font-size: 1.3rem;
-      position: relative;
-      z-index: 5;
-      color: white;
     }
-
     h3 {
       font-size: 0.9rem;
-      z-index: 5;
       width: 90%;
       height: 7rem;
-      color: white;
     }
   }
 }
 
 @media (max-width: 650px) {
   .container-grid {
-    // background-color: red;
-    width: 96%;
-    // height: auto;
-    grid-template-rows: 1fr 250px 250px 250px ;
+    grid-template-rows: 1fr 230px 230px 220px;
     grid-template-areas:
       "perfil perfil perfil perfil"
       "cv cv contact contact"
       "linkedin linkedin  edad edad "
       "proyect proyect proyect proyect";
-    // gap: 10px;
-    // justify-content: center;
-    // justify-content: center; /* Centrar horizontalmente */
-    // align-items: center;
   }
   .box {
     max-height: 300px;
@@ -347,70 +319,13 @@ a {
       line-height: 1.1;
     }
     button {
-      border-radius: 15px;
-      font-size: 1rem;
-      color: white;
-      background-color: #e65e59;
       width: 60%;
-    }
-  }
-
-  .cv {
-    h2 {
-      font-family: "monserrat", sans-serif;
-      font-size: 0.9rem;
-    }
-    mat-icon {
-      font-size: 1.9rem;
-      width: auto;
-      height: auto;
     }
   }
 
   .contact {
     mat-icon {
       font-size: 4rem;
-    }
-  }
-
-  .linkedin {
-    h2 {
-      font-size: 5rem;
-    }
-  }
-
-  .age {
-    h2 {
-      font-size: 3.5rem;
-      padding: 0.5rem;
-    }
-
-    h3 {
-      font-size: 1rem;
-    }
-    h4 {
-      font-size: 1rem;
-    }
-  }
-
-  .proyect {
-    .text {
-      margin-top: 2rem;
-      margin-left: 2rem;
-    }
-    h2 {
-      font-size: 1.3rem;
-      position: relative;
-      z-index: 5;
-      color: white;
-    }
-
-    h3 {
-      font-size: 0.9rem;
-      z-index: 5;
-      width: 90%;
-      height: 7rem;
-      color: white;
     }
   }
 }

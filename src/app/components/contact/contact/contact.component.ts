@@ -46,7 +46,6 @@ export class ContactComponent {
 
   ngOnInit() {
     this.formEmail.reset();
-    
   }
 
   getErrorMessage(tipo: number, msj: string): string {
@@ -66,12 +65,7 @@ export class ContactComponent {
         subject: this.formEmail.get('subject')?.value,
         message: this.formEmail.get('message')?.value,
       };
-
-      console.log(formData.message);
-      console.log(formData.name);
-
       this.spinner.show();
-
       this.http
         .post('https://api-email-porfolio.onrender.com/api/sendEmail', formData)
         .subscribe(
