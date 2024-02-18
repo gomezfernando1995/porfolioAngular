@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from './dialogo/dialog/dialog.component';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-contact',
@@ -17,6 +20,10 @@ export class ContactComponent {
       Validators.maxLength(50),
     ]),
     name: new FormControl('', [Validators.required, Validators.minLength(1)]),
+    subject: new FormControl('', [
+      Validators.required,
+      Validators.minLength(1),
+    ]),
     message: new FormControl('', [
       Validators.required,
       Validators.minLength(5),
@@ -25,11 +32,21 @@ export class ContactComponent {
 
   correo: any = this.formEmail.get('email');
   nombre: any = this.formEmail.get('name');
+  isDesktop: boolean = window.innerWidth > 900;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    public dialog: MatDialog,
+    private spinner: NgxSpinnerService
+  ) {
+    window.addEventListener('resize', () => {
+      this.isDesktop = window.innerWidth > 900; // Actualiza el valor al cambiar el tamaño de la ventana
+    });
+  }
 
   ngOnInit() {
     this.formEmail.reset();
+    
   }
 
   getErrorMessage(tipo: number, msj: string): string {
@@ -42,23 +59,44 @@ export class ContactComponent {
   }
 
   send() {
-    const msj = this.formEmail.get('message')?.value;
-    const name = this.formEmail.get('name')?.value;
-    const email = this.formEmail.get('email')?.value;
-
     if (this.formEmail.valid) {
+      const formData = {
+        name: this.formEmail.get('name')?.value,
+        from: this.formEmail.get('email')?.value,
+        subject: this.formEmail.get('subject')?.value,
+        message: this.formEmail.get('message')?.value,
+      };
+
+      console.log(formData.message);
+      console.log(formData.name);
+
+      this.spinner.show();
+
       this.http
-        .post('https://formspree.io/f/{moqgqzlp}', this.formEmail.value)
+        .post('https://api-email-porfolio.onrender.com/api/sendEmail', formData)
         .subscribe(
-          (response) => {
-            // Manejar la respuesta
-            console.log(response);
+          () => {
+            console.log('Correo enviado exitosamente');
+            this.cleanInput();
+            this.openDialog();
           },
           (error) => {
-            // Manejar el error
-            console.error(error);
+            console.error('Error al enviar el correo:', error);
           }
-        );
+        )
+        .add(() => {
+          this.spinner.hide();
+        });
     }
+  }
+
+  openDialog() {
+    this.dialog.open(DialogComponent);
+  }
+  cleanInput() {
+    this.formEmail.get('name')?.setValue(''),
+      this.formEmail.get('email')?.setValue(''),
+      this.formEmail.get('subject')?.setValue('');
+    this.formEmail.get('message')?.setValue('');
   }
 }

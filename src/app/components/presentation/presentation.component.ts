@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-presentation',
@@ -11,7 +12,7 @@ export class PresentationComponent {
   age!: string;
   isDesktop: boolean = window.innerWidth > 768;
 
-  constructor() {
+  constructor(public spinner:NgxSpinnerService ) {
     this.myAge();
   }
 
