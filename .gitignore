@@ -47,4 +47,4 @@ Thumbs.db
 .runtimeconfig.json
 
 noGit.ts
-environments
+\src\environments
