@@ -18,12 +18,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { DialogComponent } from './components/contact/contact/dialogo/dialog/dialog.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-//FIREBASE
-// import { getAnalytics } from 'firebase/analytics';
-// import { environment } from 'src/environments/environment';
-// import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-// import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-// import { provideAuth, getAuth } from '@angular/fire/auth';
+import { WindowPasswordComponent } from './components/window-password/window-password.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +51,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     PresentationComponent,
     ContactComponent,
     DialogComponent,
+    WindowPasswordComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],

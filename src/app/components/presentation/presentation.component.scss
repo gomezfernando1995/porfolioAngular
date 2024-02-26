@@ -43,25 +43,42 @@ a {
 
   .container-info {
     margin-left: 3rem;
-    margin-top: 6rem;
-    width: 50%;
+    margin-top: 4rem;
+    width: 60%;
   }
 
   h2 {
     font-family: "monserrat-bold", sans-serif;
     font-size: 2.5rem;
     line-height: 1;
-    width: 80%;
-    height: 70%;
-    margin-bottom: 2.5rem;
+    width: 35rem;
+    text-align: center;
+
+    mat-icon:hover {
+      color: antiquewhite;
+      cursor: pointer;
+    }
   }
-  p {
-    width: 26rem;
-    font-family: "monserrat-thin", sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.2;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+  
+  .cont-descripcion {
+    width: 35rem;
+    height: 12rem;
+    // background-color: red;
+    display: flex;
+    align-items: center;
+    p {
+      width: 100%;
+      font-family: "monserrat-thin", sans-serif;
+      padding-left: 2.3rem;
+      font-size: 1.2rem;
+      line-height: 1.2;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 12;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   }
 
   button {
@@ -219,6 +236,17 @@ a {
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      .cont-descripcion {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: start;
+        p{
+          width: 100%;
+         
+
+        }
+      }
     }
 
     h2 {

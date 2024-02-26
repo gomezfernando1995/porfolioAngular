@@ -2,18 +2,19 @@
 
 
   <div class="cont-left">
-    <img class="logo" src="../../../assets/logo/tiny.png" alt="milogo">
+    @if(!isDesktop){
+      <img width="12.6rem" class="logo" src="../../../assets/logo/tiny.png" alt="milogo" (click)="increaseClick()">
+    }@else {
+      <img width="7rem"  class="logo" src="../../../assets/logo/tiny.png"  alt="milogo" (click)="increaseClick()" >
+    }
   </div>
-  
-
- 
 
   <div class="cont-right">
     @if (isDesktop) {
-    <button mat-button>Inicio </button>
+    <!-- <button mat-button>Inicio </button>
     <button mat-button>Sobre mi</button>
     <button mat-button>Portfolio</button>
-    <button mat-button>Contactame</button>
+    <button mat-button>Contactame</button> -->
   }
   </div>
 
