@@ -171,33 +171,36 @@ a {
 
 .age {
   grid-area: edad;
-  font-family: open;
-  flex-direction: column;
-  color: rgb(255, 255, 255);
-  background-color: rgb(175, 175, 106);
+  // font-family: open;
+  // flex-direction: column;
+  // color: rgb(255, 255, 255);
+  background-color: rgb(50, 42, 75);
+ 
+  img{
+    width: 9rem;
+  }
+  // h2 {
+  //   font-family: "monserrat-bold", sans-serif;
+  //   font-size: 4.3rem;
+  //   padding: 1rem;
+  // }
 
-  h2 {
-    font-family: "monserrat-bold", sans-serif;
-    font-size: 4.3rem;
-    padding: 1rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-    font-family: "monserrat-semibold", sans-serif;
-  }
-  h4 {
-    font-size: 1.2rem;
-    font-family: "monserrat-thin", sans-serif;
-  }
+  // h3 {
+  //   font-size: 1.3rem;
+  //   font-family: "monserrat-semibold", sans-serif;
+  // }
+  // h4 {
+  //   font-size: 1.2rem;
+  //   font-family: "monserrat-thin", sans-serif;
+  // }
 }
 // --------------------------------------  HOVER       --------------------------------------
 
 .contact,
 .cv,
 .perfil,
-.linkedin {
-  transition: background-color 0.2s ease;
+.linkedin,.age {
+  transition: background-color 0.5s ease;
 }
 
 .linkedin:hover {
@@ -208,6 +211,11 @@ a {
 .cv:hover,
 .perfil:hover {
   background-color: $red-target-hover;
+}
+
+.age:hover{
+  background-color: rgb(64, 54, 95);
+
 }
 
 // --------------------------------------  MEDIA QUERIES  --------------------------------------
@@ -300,6 +308,9 @@ a {
     h4 {
       font-size: 1rem;
     }
+    img{
+      width: 8rem;
+    }
   }
 
   .proyect {
@@ -354,6 +365,11 @@ a {
   .contact {
     mat-icon {
       font-size: 4rem;
+    }
+  }
+  .age{
+    img{
+      width: 6rem;
     }
   }
 }

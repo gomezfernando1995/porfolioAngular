@@ -14,7 +14,7 @@
                 <div class="cont-descripcion" >
                     <p> {{ this.descripcion_breve}}</p>
                 </div>
-                <button  mat-button>Conocer Mas</button>
+                <button  (click)="enConstruccion()" mat-button>Conocer Mas</button>
             </div>
             @if (isDesktop) {
             <!-- <div class="cont-photo">      
@@ -57,7 +57,7 @@
         <div class="box proyect">
             <img src="../../../assets/gif/proyect.gif" alt="GIF">
             <div class="text">
-                <h2>Proyectos y practicas</h2>
+                 <a routerLink="/notfound"><h2>Proyectos y practicas</h2> </a>
                 <h3>Aca están los proyectos y practicas que desarrolle a lo
                     largo de mis estudios</h3>
             </div>
@@ -71,9 +71,12 @@
         </div>
 
         <div class="box age">
-            <h4>EDAD</h4>
+            <!-- <h4>EDAD</h4>
             <h2>{{this.age}}</h2>
-            <h3>AÑOS</h3>
+            <h3>AÑOS</h3> -->
+            <!-- <img class="fondo" src="../../../assets/logo/fondo.jpg" alt="png"> -->
+            <a href="https://github.com/gomezfernando1995" target="_blank" rel="noopener noreferrer"> <img  src="../../../assets/logo/github-mark-white.png" router alt="png"></a>
+           
         </div>
     </div>
 

@@ -12,7 +12,7 @@ export class PresentationComponent {
   suLocalStorage!:string;
   age!: string;
   isDesktop: boolean = window.innerWidth > 768;
-  descripcion_breve = "Soy estudiante de Analista de Sistemas  y  empleado en el   sector de Infraestructura de Redes   . En mi tiempo libre perfecciono mis  habilidades como desarrollador Fullstack usando tecnologías como  Angular y  Node.js. Siempre estoy buscando nuevas metas para crecer profesionalmente y expandir mis habilidades en el campo de la tecnología.";
+  descripcion_breve ="Soy estudiante de Analista de Sistemas y empleado en el sector de Infraestructura de Redes. En mi tiempo libre perfecciono mis habilidades como desarrollador Fullstack usando tecnologías como  Angular y  Node.js. Siempre estoy buscando nuevas metas para crecer profesionalmente y expandir mis habilidades en el campo de la tecnología.";
   // descripcion_breve = " Soy estudiante de <strong>Analista de Sistemas</strong>  y  empleado en el   sector de <strong>Infraestructura de Redes</strong>   . En mi tiempo libre perfecciono mis  habilidades como desarrollador Fullstack usando tecnologías como  <strong>Angular</strong> y <strong> Node.js </strong>.  Siempre estoy buscando nuevas oportunidades para crecer profesionalmente y   expandir mis habilidades en el campo de la tecnología.";
 
   constructor(public spinner: NgxSpinnerService) {
@@ -40,6 +40,9 @@ export class PresentationComponent {
   editClick(){
     localStorage.setItem('su','false');
     window.location.reload();
+  }
+  enConstruccion(){
+    alert("Sector en desarrollo, esta mal dejarlo pero lo deje por maquetacion y ubicacion de los componentes 😁. Lo bueno se hace esperar 😼");
   }
  
 }
