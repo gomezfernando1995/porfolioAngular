@@ -14,7 +14,7 @@ export class AppComponent {
   }
 
   wakeUpServer(): void {
-    this.http.get('https://tu-api.com/dummy')
+    this.http.get('https://api-email-porfolio.onrender.com/api/dummy')
       .subscribe(() => console.log('Servidor despertado'));
   }
 
