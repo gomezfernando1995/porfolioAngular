@@ -19,13 +19,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { DialogComponent } from './components/contact/contact/dialogo/dialog/dialog.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { WindowPasswordComponent } from './components/window-password/window-password.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PresentationComponent,
-    ContactComponent,
+    ContactComponent,   
+     NotfoundComponent
   ],
   imports: [
     HttpClientModule,
@@ -50,8 +52,7 @@ import { WindowPasswordComponent } from './components/window-password/window-pas
     NavbarComponent,
     PresentationComponent,
     ContactComponent,
-    DialogComponent,
-    WindowPasswordComponent
+    DialogComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
